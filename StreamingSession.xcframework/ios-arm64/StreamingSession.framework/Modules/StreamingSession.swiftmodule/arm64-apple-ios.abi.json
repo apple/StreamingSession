@@ -1,0 +1,3639 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "StreamingSession",
+    "printedName": "StreamingSession",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Observation",
+        "printedName": "Observation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Synchronization",
+        "printedName": "Synchronization",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "CryptoKit",
+        "printedName": "CryptoKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Observation",
+        "printedName": "Observation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "CloudXRKit",
+        "printedName": "CloudXRKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CloudXRKit",
+        "printedName": "CloudXRKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Synchronization",
+        "printedName": "Synchronization",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Observation",
+        "printedName": "Observation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StreamingEndpoint",
+        "printedName": "StreamingEndpoint",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "systemDiscovered",
+            "printedName": "systemDiscovered",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StreamingEndpoint",
+                "printedName": "StreamingSession.StreamingEndpoint",
+                "usr": "s:16StreamingSession0A8EndpointV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16StreamingSession0A8EndpointV16systemDiscoveredACvpZ",
+            "mangledName": "$s16StreamingSession0A8EndpointV16systemDiscoveredACvpZ",
+            "moduleName": "StreamingSession",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StreamingEndpoint",
+                    "printedName": "StreamingSession.StreamingEndpoint",
+                    "usr": "s:16StreamingSession0A8EndpointV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16StreamingSession0A8EndpointV16systemDiscoveredACvgZ",
+                "mangledName": "$s16StreamingSession0A8EndpointV16systemDiscoveredACvgZ",
+                "moduleName": "StreamingSession",
+                "static": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "local",
+            "printedName": "local(ipAddress:port:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StreamingEndpoint",
+                "printedName": "StreamingSession.StreamingEndpoint",
+                "usr": "s:16StreamingSession0A8EndpointV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16StreamingSession0A8EndpointV5local9ipAddress4portACSS_SitFZ",
+            "mangledName": "$s16StreamingSession0A8EndpointV5local9ipAddress4portACSS_SitFZ",
+            "moduleName": "StreamingSession",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remote",
+            "printedName": "remote(serverName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StreamingEndpoint",
+                "printedName": "StreamingSession.StreamingEndpoint",
+                "usr": "s:16StreamingSession0A8EndpointV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16StreamingSession0A8EndpointV6remote10serverNameACSS_tFZ",
+            "mangledName": "$s16StreamingSession0A8EndpointV6remote10serverNameACSS_tFZ",
+            "moduleName": "StreamingSession",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "StreamingEndpoint",
+                "printedName": "StreamingSession.StreamingEndpoint",
+                "usr": "s:16StreamingSession0A8EndpointV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16StreamingSession0A8EndpointV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s16StreamingSession0A8EndpointV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "StreamingSession",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16StreamingSession0A8EndpointV9hashValueSivp",
+            "mangledName": "$s16StreamingSession0A8EndpointV9hashValueSivp",
+            "moduleName": "StreamingSession",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16StreamingSession0A8EndpointV9hashValueSivg",
+                "mangledName": "$s16StreamingSession0A8EndpointV9hashValueSivg",
+                "moduleName": "StreamingSession",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16StreamingSession0A8EndpointV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s16StreamingSession0A8EndpointV4hash4intoys6HasherVz_tF",
+            "moduleName": "StreamingSession",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StreamingEndpoint",
+                "printedName": "StreamingSession.StreamingEndpoint",
+                "usr": "s:16StreamingSession0A8EndpointV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StreamingEndpoint",
+                "printedName": "StreamingSession.StreamingEndpoint",
+                "usr": "s:16StreamingSession0A8EndpointV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16StreamingSession0A8EndpointV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s16StreamingSession0A8EndpointV2eeoiySbAC_ACtFZ",
+            "moduleName": "StreamingSession",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16StreamingSession0A8EndpointV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s16StreamingSession0A8EndpointV6encode2toys7Encoder_p_tKF",
+            "moduleName": "StreamingSession",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16StreamingSession0A8EndpointV",
+        "mangledName": "$s16StreamingSession0A8EndpointV",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CloudXRKit",
+        "printedName": "CloudXRKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "VisionKit",
+        "printedName": "VisionKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Vision",
+        "printedName": "Vision",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "CloudXRKit",
+        "printedName": "CloudXRKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CloudXRKit",
+        "printedName": "CloudXRKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "CloudXRKit",
+        "printedName": "CloudXRKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FoveatedStreamingSession",
+        "printedName": "FoveatedStreamingSession",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "ID",
+            "printedName": "ID",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ID",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.ID",
+                    "usr": "s:16StreamingSession08FoveatedaB0C2IDV"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:16StreamingSession08FoveatedaB0C2IDVAEycfc",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C2IDVAEycfc",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(from:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ID",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.ID",
+                    "usr": "s:16StreamingSession08FoveatedaB0C2IDV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Decoder",
+                    "printedName": "any Swift.Decoder",
+                    "usr": "s:s7DecoderP"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:16StreamingSession08FoveatedaB0C2IDV4fromAEs7Decoder_p_tKcfc",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C2IDV4fromAEs7Decoder_p_tKcfc",
+                "moduleName": "StreamingSession",
+                "implicit": true,
+                "throwing": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16StreamingSession08FoveatedaB0C2IDV9hashValueSivp",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C2IDV9hashValueSivp",
+                "moduleName": "StreamingSession",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16StreamingSession08FoveatedaB0C2IDV9hashValueSivg",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C2IDV9hashValueSivg",
+                    "moduleName": "StreamingSession",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16StreamingSession08FoveatedaB0C2IDV4hash4intoys6HasherVz_tF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C2IDV4hash4intoys6HasherVz_tF",
+                "moduleName": "StreamingSession",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ID",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.ID",
+                    "usr": "s:16StreamingSession08FoveatedaB0C2IDV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ID",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.ID",
+                    "usr": "s:16StreamingSession08FoveatedaB0C2IDV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16StreamingSession08FoveatedaB0C2IDV2eeoiySbAE_AEtFZ",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C2IDV2eeoiySbAE_AEtFZ",
+                "moduleName": "StreamingSession",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "encode",
+                "printedName": "encode(to:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Encoder",
+                    "printedName": "any Swift.Encoder",
+                    "usr": "s:s7EncoderP"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16StreamingSession08FoveatedaB0C2IDV6encode2toys7Encoder_p_tKF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C2IDV6encode2toys7Encoder_p_tKF",
+                "moduleName": "StreamingSession",
+                "implicit": true,
+                "throwing": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:16StreamingSession08FoveatedaB0C2IDV",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C2IDV",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Decodable",
+                "printedName": "Decodable",
+                "usr": "s:Se",
+                "mangledName": "$sSe"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Encodable",
+                "printedName": "Encodable",
+                "usr": "s:SE",
+                "mangledName": "$sSE"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ID",
+                "printedName": "StreamingSession.FoveatedStreamingSession.ID",
+                "usr": "s:16StreamingSession08FoveatedaB0C2IDV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16StreamingSession08FoveatedaB0C2idAC2IDVvp",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C2idAC2IDVvp",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ID",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.ID",
+                    "usr": "s:16StreamingSession08FoveatedaB0C2IDV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16StreamingSession08FoveatedaB0C2idAC2IDVvg",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C2idAC2IDVvg",
+                "moduleName": "StreamingSession",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Status",
+            "printedName": "Status",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "initialized",
+                "printedName": "initialized",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(StreamingSession.FoveatedStreamingSession.Status.Type) -> StreamingSession.FoveatedStreamingSession.Status",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Status",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                        "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                            "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO11initializedyA2EmF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO11initializedyA2EmF",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "connecting",
+                "printedName": "connecting",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(StreamingSession.FoveatedStreamingSession.Status.Type) -> StreamingSession.FoveatedStreamingSession.Status",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Status",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                        "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                            "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO10connectingyA2EmF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO10connectingyA2EmF",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "connected",
+                "printedName": "connected",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(StreamingSession.FoveatedStreamingSession.Status.Type) -> StreamingSession.FoveatedStreamingSession.Status",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Status",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                        "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                            "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO9connectedyA2EmF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO9connectedyA2EmF",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "disconnected",
+                "printedName": "disconnected",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(StreamingSession.FoveatedStreamingSession.Status.Type) -> (StreamingSession.FoveatedStreamingSession.DisconnectReason) -> StreamingSession.FoveatedStreamingSession.Status",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(StreamingSession.FoveatedStreamingSession.DisconnectReason) -> StreamingSession.FoveatedStreamingSession.Status",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                            "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DisconnectReason",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.DisconnectReason",
+                            "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                            "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO12disconnectedyAeC16DisconnectReasonVcAEmF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO12disconnectedyAeC16DisconnectReasonVcAEmF",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "disconnecting",
+                "printedName": "disconnecting",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(StreamingSession.FoveatedStreamingSession.Status.Type) -> StreamingSession.FoveatedStreamingSession.Status",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Status",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                        "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                            "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO13disconnectingyA2EmF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO13disconnectingyA2EmF",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "paused",
+                "printedName": "paused",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(StreamingSession.FoveatedStreamingSession.Status.Type) -> StreamingSession.FoveatedStreamingSession.Status",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Status",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                        "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                            "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO6pausedyA2EmF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO6pausedyA2EmF",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "pausing",
+                "printedName": "pausing",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(StreamingSession.FoveatedStreamingSession.Status.Type) -> StreamingSession.FoveatedStreamingSession.Status",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Status",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                        "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                            "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO7pausingyA2EmF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO7pausingyA2EmF",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "resuming",
+                "printedName": "resuming",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(StreamingSession.FoveatedStreamingSession.Status.Type) -> StreamingSession.FoveatedStreamingSession.Status",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Status",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                        "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.Status.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Status",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                            "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO8resumingyA2EmF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO8resumingyA2EmF",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "description",
+                "printedName": "description",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO11descriptionSSvp",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO11descriptionSSvp",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16StreamingSession08FoveatedaB0C6StatusO11descriptionSSvg",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO11descriptionSSvg",
+                    "moduleName": "StreamingSession",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Status",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                    "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Status",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                    "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO2eeoiySbAE_AEtFZ",
+                "moduleName": "StreamingSession",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16StreamingSession08FoveatedaB0C6StatusO",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C6StatusO",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "DisconnectReason",
+            "printedName": "DisconnectReason",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "appInitiatedDisconnect",
+                "printedName": "appInitiatedDisconnect",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisconnectReason",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.DisconnectReason",
+                    "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV012appInitiatedD0AEvpZ",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C16DisconnectReasonV012appInitiatedD0AEvpZ",
+                "moduleName": "StreamingSession",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DisconnectReason",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.DisconnectReason",
+                        "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV012appInitiatedD0AEvgZ",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C16DisconnectReasonV012appInitiatedD0AEvgZ",
+                    "moduleName": "StreamingSession",
+                    "static": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "unauthorized",
+                "printedName": "unauthorized",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisconnectReason",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.DisconnectReason",
+                    "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV12unauthorizedAEvpZ",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C16DisconnectReasonV12unauthorizedAEvpZ",
+                "moduleName": "StreamingSession",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DisconnectReason",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.DisconnectReason",
+                        "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV12unauthorizedAEvgZ",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C16DisconnectReasonV12unauthorizedAEvgZ",
+                    "moduleName": "StreamingSession",
+                    "static": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "streamInterrupted",
+                "printedName": "streamInterrupted(localizedDescription:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisconnectReason",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.DisconnectReason",
+                    "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV17streamInterrupted20localizedDescriptionAESS_tFZ",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C16DisconnectReasonV17streamInterrupted20localizedDescriptionAESS_tFZ",
+                "moduleName": "StreamingSession",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "errorDescription",
+                "printedName": "errorDescription",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV16errorDescriptionSSSgvp",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C16DisconnectReasonV16errorDescriptionSSSgvp",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV16errorDescriptionSSSgvg",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C16DisconnectReasonV16errorDescriptionSSSgvg",
+                    "moduleName": "StreamingSession",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisconnectReason",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.DisconnectReason",
+                    "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DisconnectReason",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.DisconnectReason",
+                    "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV2eeoiySbAE_AEtFZ",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C16DisconnectReasonV2eeoiySbAE_AEtFZ",
+                "moduleName": "StreamingSession",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:16StreamingSession08FoveatedaB0C16DisconnectReasonV",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C16DisconnectReasonV",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "LocalizedError",
+                "printedName": "LocalizedError",
+                "usr": "s:10Foundation14LocalizedErrorP",
+                "mangledName": "$s10Foundation14LocalizedErrorP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Error",
+                "printedName": "Error",
+                "usr": "s:s5ErrorP",
+                "mangledName": "$ss5ErrorP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Status",
+                "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16StreamingSession08FoveatedaB0C6statusAC6StatusOvp",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C6statusAC6StatusOvp",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "HasInitialValue",
+              "Custom",
+              "Custom",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Status",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.Status",
+                    "usr": "s:16StreamingSession08FoveatedaB0C6StatusO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16StreamingSession08FoveatedaB0C6statusAC6StatusOvg",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C6statusAC6StatusOvg",
+                "moduleName": "StreamingSession",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FoveatedStreamingSession",
+                "printedName": "StreamingSession.FoveatedStreamingSession",
+                "usr": "s:16StreamingSession08FoveatedaB0C"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16StreamingSession08FoveatedaB0CACycfc",
+            "mangledName": "$s16StreamingSession08FoveatedaB0CACycfc",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(endpoint:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StreamingEndpoint",
+                "printedName": "StreamingSession.StreamingEndpoint",
+                "usr": "s:16StreamingSession0A8EndpointV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16StreamingSession08FoveatedaB0C7connect8endpointyAA0A8EndpointV_tYaKF",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C7connect8endpointyAA0A8EndpointV_tYaKF",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16StreamingSession08FoveatedaB0C10disconnectyyYaF",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C10disconnectyyYaF",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16StreamingSession08FoveatedaB0C5pauseyyYaKF",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C5pauseyyYaKF",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resume",
+            "printedName": "resume()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16StreamingSession08FoveatedaB0C6resumeyyYaKF",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C6resumeyyYaKF",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "availableMessageChannels",
+            "printedName": "availableMessageChannels",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[StreamingSession.FoveatedStreamingSession.MessageChannel.ID]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ID",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ID",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16StreamingSession08FoveatedaB0C24availableMessageChannelsSayAC0E7ChannelC2IDVGvp",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C24availableMessageChannelsSayAC0E7ChannelC2IDVGvp",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[StreamingSession.FoveatedStreamingSession.MessageChannel.ID]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ID",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ID",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16StreamingSession08FoveatedaB0C24availableMessageChannelsSayAC0E7ChannelC2IDVGvg",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C24availableMessageChannelsSayAC0E7ChannelC2IDVGvg",
+                "moduleName": "StreamingSession",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getMessageChannel",
+            "printedName": "getMessageChannel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MessageChannel",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ID",
+                "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ID",
+                "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16StreamingSession08FoveatedaB0C17getMessageChannelyAC0eF0CSgAF2IDVF",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C17getMessageChannelyAC0eF0CSgAF2IDVF",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "MessageChannel",
+            "printedName": "MessageChannel",
+            "children": [
+              {
+                "kind": "TypeDecl",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "Var",
+                    "name": "uuidRepresentation",
+                    "printedName": "uuidRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.UUID?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UUID",
+                            "printedName": "Foundation.UUID",
+                            "usr": "s:10Foundation4UUIDV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV18uuidRepresentation10Foundation4UUIDVSgvp",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2IDV18uuidRepresentation10Foundation4UUIDVSgvp",
+                    "moduleName": "StreamingSession",
+                    "declAttributes": [
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Foundation.UUID?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UUID",
+                                "printedName": "Foundation.UUID",
+                                "usr": "s:10Foundation4UUIDV"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV18uuidRepresentation10Foundation4UUIDVSgvg",
+                        "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2IDV18uuidRepresentation10Foundation4UUIDVSgvg",
+                        "moduleName": "StreamingSession",
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "stringRepresentation",
+                    "printedName": "stringRepresentation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV20stringRepresentationSSvp",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2IDV20stringRepresentationSSvp",
+                    "moduleName": "StreamingSession",
+                    "declAttributes": [
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV20stringRepresentationSSvg",
+                        "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2IDV20stringRepresentationSSvg",
+                        "moduleName": "StreamingSession",
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Constructor",
+                    "name": "init",
+                    "printedName": "init(_:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ID",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ID",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UUID",
+                        "printedName": "Foundation.UUID",
+                        "usr": "s:10Foundation4UUIDV"
+                      }
+                    ],
+                    "declKind": "Constructor",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDVyAG10Foundation4UUIDVcfc",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2IDVyAG10Foundation4UUIDVcfc",
+                    "moduleName": "StreamingSession",
+                    "declAttributes": [
+                      "AccessControl",
+                      "RawDocComment"
+                    ],
+                    "init_kind": "Designated"
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "hashValue",
+                    "printedName": "hashValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV9hashValueSivp",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2IDV9hashValueSivp",
+                    "moduleName": "StreamingSession",
+                    "implicit": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV9hashValueSivg",
+                        "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2IDV9hashValueSivg",
+                        "moduleName": "StreamingSession",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Function",
+                    "name": "hash",
+                    "printedName": "hash(into:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Hasher",
+                        "printedName": "Swift.Hasher",
+                        "paramValueOwnership": "InOut",
+                        "usr": "s:s6HasherV"
+                      }
+                    ],
+                    "declKind": "Func",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV4hash4intoys6HasherVz_tF",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2IDV4hash4intoys6HasherVz_tF",
+                    "moduleName": "StreamingSession",
+                    "implicit": true,
+                    "funcSelfKind": "NonMutating"
+                  },
+                  {
+                    "kind": "Function",
+                    "name": "==",
+                    "printedName": "==(_:_:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ID",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ID",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ID",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ID",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV"
+                      }
+                    ],
+                    "declKind": "Func",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV2eeoiySbAG_AGtFZ",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2IDV2eeoiySbAG_AGtFZ",
+                    "moduleName": "StreamingSession",
+                    "static": true,
+                    "implicit": true,
+                    "funcSelfKind": "NonMutating"
+                  }
+                ],
+                "declKind": "Struct",
+                "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2IDV",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "conformances": [
+                  {
+                    "kind": "Conformance",
+                    "name": "Copyable",
+                    "printedName": "Copyable",
+                    "usr": "s:s8CopyableP",
+                    "mangledName": "$ss8CopyableP"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Escapable",
+                    "printedName": "Escapable",
+                    "usr": "s:s9EscapableP",
+                    "mangledName": "$ss9EscapableP"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Hashable",
+                    "printedName": "Hashable",
+                    "usr": "s:SH",
+                    "mangledName": "$sSH"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Equatable",
+                    "printedName": "Equatable",
+                    "usr": "s:SQ",
+                    "mangledName": "$sSQ"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Sendable",
+                    "printedName": "Sendable",
+                    "usr": "s:s8SendableP",
+                    "mangledName": "$ss8SendableP"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "SendableMetatype",
+                    "printedName": "SendableMetatype",
+                    "usr": "s:s16SendableMetatypeP",
+                    "mangledName": "$ss16SendableMetatypeP"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "id",
+                "printedName": "id",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ID",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ID",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2idAE2IDVvp",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2idAE2IDVvp",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "Final",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ID",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ID",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2idAE2IDVvg",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC2idAE2IDVvg",
+                    "moduleName": "StreamingSession",
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "receivedMessageStream",
+                "printedName": "receivedMessageStream",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AsyncStream",
+                    "printedName": "_Concurrency.AsyncStream<Foundation.Data>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:ScS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC08receivedD6StreamScSy10Foundation4DataVGvp",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC08receivedD6StreamScSy10Foundation4DataVGvp",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AsyncStream",
+                        "printedName": "_Concurrency.AsyncStream<Foundation.Data>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:ScS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC08receivedD6StreamScSy10Foundation4DataVGvg",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC08receivedD6StreamScSy10Foundation4DataVGvg",
+                    "moduleName": "StreamingSession",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeDecl",
+                "name": "ChannelStatus",
+                "printedName": "ChannelStatus",
+                "children": [
+                  {
+                    "kind": "Var",
+                    "name": "ready",
+                    "printedName": "ready",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus.Type) -> StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChannelStatus",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus",
+                            "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Metatype",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus.Type",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ChannelStatus",
+                                "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus",
+                                "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "declKind": "EnumElement",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO5readyyA2GmF",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO5readyyA2GmF",
+                    "moduleName": "StreamingSession",
+                    "declAttributes": [
+                      "RawDocComment"
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "closed",
+                    "printedName": "closed",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus.Type) -> StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChannelStatus",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus",
+                            "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Metatype",
+                            "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus.Type",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ChannelStatus",
+                                "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus",
+                                "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "declKind": "EnumElement",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO6closedyA2GmF",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO6closedyA2GmF",
+                    "moduleName": "StreamingSession",
+                    "declAttributes": [
+                      "RawDocComment"
+                    ]
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "hashValue",
+                    "printedName": "hashValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Var",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO9hashValueSivp",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO9hashValueSivp",
+                    "moduleName": "StreamingSession",
+                    "implicit": true,
+                    "accessors": [
+                      {
+                        "kind": "Accessor",
+                        "name": "Get",
+                        "printedName": "Get()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ],
+                        "declKind": "Accessor",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO9hashValueSivg",
+                        "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO9hashValueSivg",
+                        "moduleName": "StreamingSession",
+                        "implicit": true,
+                        "accessorKind": "get"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "Function",
+                    "name": "hash",
+                    "printedName": "hash(into:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Hasher",
+                        "printedName": "Swift.Hasher",
+                        "paramValueOwnership": "InOut",
+                        "usr": "s:s6HasherV"
+                      }
+                    ],
+                    "declKind": "Func",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO4hash4intoys6HasherVz_tF",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO4hash4intoys6HasherVz_tF",
+                    "moduleName": "StreamingSession",
+                    "implicit": true,
+                    "funcSelfKind": "NonMutating"
+                  },
+                  {
+                    "kind": "Function",
+                    "name": "==",
+                    "printedName": "==(_:_:)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChannelStatus",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChannelStatus",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO"
+                      }
+                    ],
+                    "declKind": "Func",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO2eeoiySbAG_AGtFZ",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO2eeoiySbAG_AGtFZ",
+                    "moduleName": "StreamingSession",
+                    "static": true,
+                    "implicit": true,
+                    "funcSelfKind": "NonMutating"
+                  }
+                ],
+                "declKind": "Enum",
+                "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "conformances": [
+                  {
+                    "kind": "Conformance",
+                    "name": "Copyable",
+                    "printedName": "Copyable",
+                    "usr": "s:s8CopyableP",
+                    "mangledName": "$ss8CopyableP"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Escapable",
+                    "printedName": "Escapable",
+                    "usr": "s:s9EscapableP",
+                    "mangledName": "$ss9EscapableP"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Hashable",
+                    "printedName": "Hashable",
+                    "usr": "s:SH",
+                    "mangledName": "$sSH"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Equatable",
+                    "printedName": "Equatable",
+                    "usr": "s:SQ",
+                    "mangledName": "$sSQ"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "Sendable",
+                    "printedName": "Sendable",
+                    "usr": "s:s8SendableP",
+                    "mangledName": "$ss8SendableP"
+                  },
+                  {
+                    "kind": "Conformance",
+                    "name": "SendableMetatype",
+                    "printedName": "SendableMetatype",
+                    "usr": "s:s16SendableMetatypeP",
+                    "mangledName": "$ss16SendableMetatypeP"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "channelStatus",
+                "printedName": "channelStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ChannelStatus",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC13channelStatusAE0eG0Ovp",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC13channelStatusAE0eG0Ovp",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChannelStatus",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ChannelStatus",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC0E6StatusO"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC13channelStatusAE0eG0Ovg",
+                    "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC13channelStatusAE0eG0Ovg",
+                    "moduleName": "StreamingSession",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "disconnect",
+                "printedName": "disconnect()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC10disconnectyyF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC10disconnectyyF",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "sendServerMessage",
+                "printedName": "sendServerMessage(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC010sendServerD0ySb10Foundation4DataVF",
+                "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC010sendServerD0ySb10Foundation4DataVF",
+                "moduleName": "StreamingSession",
+                "declAttributes": [
+                  "AccessControl",
+                  "DiscardableResult",
+                  "RawDocComment"
+                ],
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC",
+            "mangledName": "$s16StreamingSession08FoveatedaB0C14MessageChannelC",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "hasMissingDesignatedInitializers": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Identifiable",
+                "printedName": "Identifiable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "ID",
+                    "printedName": "ID",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ID",
+                        "printedName": "StreamingSession.FoveatedStreamingSession.MessageChannel.ID",
+                        "usr": "s:16StreamingSession08FoveatedaB0C14MessageChannelC2IDV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:s12IdentifiableP",
+                "mangledName": "$ss12IdentifiableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Observable",
+                "printedName": "Observable",
+                "usr": "s:11Observation10ObservableP",
+                "mangledName": "$s11Observation10ObservableP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16StreamingSession08FoveatedaB0C",
+        "mangledName": "$s16StreamingSession08FoveatedaB0C",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "AccessControl",
+          "Custom",
+          "Custom",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ID",
+                    "printedName": "StreamingSession.FoveatedStreamingSession.ID",
+                    "usr": "s:16StreamingSession08FoveatedaB0C2IDV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Observable",
+            "printedName": "Observable",
+            "usr": "s:11Observation10ObservableP",
+            "mangledName": "$s11Observation10ObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RealityKit",
+        "printedName": "RealityKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "Import",
+        "name": "CloudXRKit",
+        "printedName": "CloudXRKit",
+        "declKind": "Import",
+        "moduleName": "StreamingSession"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FoveatedStreamingView",
+        "printedName": "FoveatedStreamingView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(session:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FoveatedStreamingView",
+                "printedName": "StreamingSession.FoveatedStreamingView",
+                "usr": "s:16StreamingSession08FoveatedA4ViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FoveatedStreamingSession",
+                "printedName": "StreamingSession.FoveatedStreamingSession",
+                "usr": "s:16StreamingSession08FoveatedaB0C"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16StreamingSession08FoveatedA4ViewV7sessionAcA0caB0C_tcfc",
+            "mangledName": "$s16StreamingSession08FoveatedA4ViewV7sessionAcA0caB0C_tcfc",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16StreamingSession08FoveatedA4ViewV4bodyQrvp",
+            "mangledName": "$s16StreamingSession08FoveatedA4ViewV4bodyQrvp",
+            "moduleName": "StreamingSession",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16StreamingSession08FoveatedA4ViewV4bodyQrvg",
+                "mangledName": "$s16StreamingSession08FoveatedA4ViewV4bodyQrvg",
+                "moduleName": "StreamingSession",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16StreamingSession08FoveatedA4ViewV",
+        "mangledName": "$s16StreamingSession08FoveatedA4ViewV",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "AccessControl",
+          "Custom",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "StreamingSession",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "View",
+        "printedName": "View",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "deviceDiscovery",
+            "printedName": "deviceDiscovery(session:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FoveatedStreamingSession",
+                "printedName": "StreamingSession.FoveatedStreamingSession",
+                "usr": "s:16StreamingSession08FoveatedaB0C"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP16StreamingSessionE15deviceDiscovery7sessionQrAD08FoveateddE0C_tF",
+            "mangledName": "$s7SwiftUI4ViewP16StreamingSessionE15deviceDiscovery7sessionQrAD08FoveateddE0C_tF",
+            "moduleName": "StreamingSession",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "devicePairing",
+            "printedName": "devicePairing(session:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FoveatedStreamingSession",
+                "printedName": "StreamingSession.FoveatedStreamingSession",
+                "usr": "s:16StreamingSession08FoveatedaB0C"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP16StreamingSessionE13devicePairing7sessionQrAD08FoveateddE0C_tF",
+            "mangledName": "$s7SwiftUI4ViewP16StreamingSessionE13devicePairing7sessionQrAD08FoveateddE0C_tF",
+            "moduleName": "StreamingSession",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:7SwiftUI4ViewP",
+        "mangledName": "$s7SwiftUI4ViewP",
+        "moduleName": "SwiftUICore",
+        "genericSig": "<τ_0_0.Body : SwiftUI.View>",
+        "sugared_genericSig": "<Self.Body : SwiftUI.View>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "Preconcurrency",
+          "TypeEraser",
+          "TypeEraser",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "OriginallyDefinedIn",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "Custom"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Logger",
+        "printedName": "Logger",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "streaming",
+            "printedName": "streaming",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Logger",
+                "printedName": "os.Logger",
+                "usr": "s:2os6LoggerV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:2os6LoggerV16StreamingSessionE9streamingACvpZ",
+            "mangledName": "$s2os6LoggerV16StreamingSessionE9streamingACvpZ",
+            "moduleName": "StreamingSession",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Logger",
+                    "printedName": "os.Logger",
+                    "usr": "s:2os6LoggerV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:2os6LoggerV16StreamingSessionE9streamingACvgZ",
+                "mangledName": "$s2os6LoggerV16StreamingSessionE9streamingACvgZ",
+                "moduleName": "StreamingSession",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:2os6LoggerV",
+        "mangledName": "$s2os6LoggerV",
+        "moduleName": "os",
+        "intro_Macosx": "11.0",
+        "intro_iOS": "14.0",
+        "intro_tvOS": "14.0",
+        "intro_watchOS": "7.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/BarcodePayload.swift",
+      "kind": "StringLiteral",
+      "offset": 749,
+      "length": 7,
+      "value": "\"token\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/BarcodePayload.swift",
+      "kind": "StringLiteral",
+      "offset": 793,
+      "length": 8,
+      "value": "\"digest\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/BarcodePayload.swift",
+      "kind": "StringLiteral",
+      "offset": 1377,
+      "length": 18,
+      "value": "\"0123456789ABCDEF\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/DiscoverySession.swift",
+      "kind": "StringLiteral",
+      "offset": 1486,
+      "length": 32,
+      "value": "\"_apple-foveated-streaming._tcp\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/DiscoverySession.swift",
+      "kind": "StringLiteral",
+      "offset": 1569,
+      "length": 8,
+      "value": "\"local.\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/DiscoverySession.swift",
+      "kind": "Dictionary",
+      "offset": 1687,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/DiscoverySession.swift",
+      "kind": "Dictionary",
+      "offset": 1758,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/DiscoverySession.swift",
+      "kind": "Array",
+      "offset": 1993,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/KeychainUtilities.swift",
+      "kind": "StringLiteral",
+      "offset": 299,
+      "length": 57,
+      "value": "\"com.example.apple.StreamReceiverDisplay.BarcodePayloads\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 267,
+      "length": 9,
+      "value": "\"WAITING\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 299,
+      "length": 12,
+      "value": "\"CONNECTING\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 333,
+      "length": 11,
+      "value": "\"CONNECTED\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 363,
+      "length": 8,
+      "value": "\"PAUSED\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 396,
+      "length": 14,
+      "value": "\"DISCONNECTED\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "Array",
+      "offset": 2247,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13371,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13400,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 20430,
+      "length": 19,
+      "value": "\"RequestConnection\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 20782,
+      "length": 7,
+      "value": "\"Event\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 20825,
+      "length": 17,
+      "value": "\"ProtocolVersion\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 20880,
+      "length": 19,
+      "value": "\"StreamingProvider\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 20944,
+      "length": 26,
+      "value": "\"StreamingProviderVersion\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21009,
+      "length": 20,
+      "value": "\"UserInterfaceIdiom\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21059,
+      "length": 11,
+      "value": "\"SessionID\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21099,
+      "length": 10,
+      "value": "\"ClientID\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21217,
+      "length": 23,
+      "value": "\"AcknowledgeConnection\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21442,
+      "length": 7,
+      "value": "\"Event\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21479,
+      "length": 11,
+      "value": "\"SessionID\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21519,
+      "length": 10,
+      "value": "\"ServerID\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21572,
+      "length": 24,
+      "value": "\"CertificateFingerprint\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21709,
+      "length": 28,
+      "value": "\"RequestBarcodePresentation\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21883,
+      "length": 7,
+      "value": "\"Event\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 21920,
+      "length": 11,
+      "value": "\"SessionID\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 22048,
+      "length": 32,
+      "value": "\"AcknowledgeBarcodePresentation\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 22209,
+      "length": 7,
+      "value": "\"Event\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 22246,
+      "length": 11,
+      "value": "\"SessionID\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 22362,
+      "length": 20,
+      "value": "\"MediaStreamIsReady\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 22511,
+      "length": 7,
+      "value": "\"Event\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 22548,
+      "length": 11,
+      "value": "\"SessionID\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 22668,
+      "length": 24,
+      "value": "\"SessionStatusDidChange\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 22865,
+      "length": 7,
+      "value": "\"Event\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 22902,
+      "length": 11,
+      "value": "\"SessionID\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 22940,
+      "length": 8,
+      "value": "\"Status\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 23059,
+      "length": 26,
+      "value": "\"RequestSessionDisconnect\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 23214,
+      "length": 7,
+      "value": "\"Event\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "StringLiteral",
+      "offset": 23251,
+      "length": 11,
+      "value": "\"SessionID\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/SessionManagementConnection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 28318,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/StreamingSession.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1607,
+      "length": 5,
+      "value": "55000"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/StreamingSession.swift",
+      "kind": "Dictionary",
+      "offset": 5892,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Model\/StreamingSession.swift",
+      "kind": "BooleanLiteral",
+      "offset": 18500,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/UI\/PairingView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7587,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/FoveatedStreaming+Session.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12944,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/FoveatedStreaming+Session.swift",
+      "kind": "BooleanLiteral",
+      "offset": 13014,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/FoveatedStreaming+Session.swift",
+      "kind": "Dictionary",
+      "offset": 13372,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/FoveatedStreaming+View.swift",
+      "kind": "BooleanLiteral",
+      "offset": 722,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Logger+FoveatedStreamingiOS.swift",
+      "kind": "StringLiteral",
+      "offset": 143,
+      "length": 28,
+      "value": "\"com.apple.StreamingSession\""
+    },
+    {
+      "filePath": "\/Library\/Caches\/com.apple.xbs\/Sources\/FoveatedStreaming_iOS\/FoveatedStreamingiOS\/Logger+FoveatedStreamingiOS.swift",
+      "kind": "StringLiteral",
+      "offset": 183,
+      "length": 11,
+      "value": "\"Streaming\""
+    }
+  ]
+}
