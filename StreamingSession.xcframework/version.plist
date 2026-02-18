@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>BuildVersion</key>
-	<string>2</string>
+	<string>3</string>
 	<key>ProjectName</key>
 	<string>FoveatedStreaming_iOS</string>
 	<key>SourceVersion</key>
-	<string>9000000000000</string>
+	<string>11000000000000</string>
 </dict>
 </plist>

@@ -6,7 +6,11 @@
 	<dict>
 		<key>ios-arm64/StreamingSession.framework/Info.plist</key>
 		<data>
-		81qakYrdvhIkU4oahNNy32TjwMo=
+		7IV1w/A9LoB3WRd/g6o1ZA//J1Q=
+		</data>
+		<key>ios-arm64/StreamingSession.framework/LICENSE</key>
+		<data>
+		6mm2kX6iMs2W0FnIjULdu3taXtY=
 		</data>
 		<key>ios-arm64/StreamingSession.framework/Modules/StreamingSession.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -14,7 +18,7 @@
 		</data>
 		<key>ios-arm64/StreamingSession.framework/Modules/StreamingSession.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Oabvo4wOOxlHV/PdWNLwEVfILqo=
+		2JuuQl8zlhZPk514FgsQdiumIlo=
 		</data>
 		<key>ios-arm64/StreamingSession.framework/Modules/StreamingSession.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -22,23 +26,23 @@
 		</data>
 		<key>ios-arm64/StreamingSession.framework/Modules/StreamingSession.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		1R2c/LRaHu8y9rqBgYY0UI3DPcY=
+		cFb3PJjR7lMR1hjC2wK423tCVOA=
 		</data>
 		<key>ios-arm64/StreamingSession.framework/StreamingSession</key>
 		<data>
-		KGQLdzVWerejrlQGBDyuiIjHDEU=
+		+N2SySzuC6bUvSVyknr5cDA5BCk=
 		</data>
 		<key>ios-arm64/StreamingSession.framework/_CodeSignature/CodeResources</key>
 		<data>
-		cG6uGtb4hrhzXxphGH25fhxApTs=
+		xoMKEBJMaOrgzxVjmpC942P1vZ4=
 		</data>
 		<key>ios-arm64/StreamingSession.framework/version.plist</key>
 		<data>
-		yqLN59VR/nd0evq5/9yF4PwvnJY=
+		6S0vIRo8zFOqQWIQZg6h8bHa8q4=
 		</data>
 		<key>version.plist</key>
 		<data>
-		AxT1KuCIvN7pxRDZkQylbCp+7f8=
+		hfNsfSTiaGii5YdCTQqeNcmgjCY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -47,11 +51,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			81qakYrdvhIkU4oahNNy32TjwMo=
+			7IV1w/A9LoB3WRd/g6o1ZA//J1Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			aeFZiRfRy0yPo1nHSKVMDOLDJjMTQuOiwf+YJpgA4lc=
+			8b0oxVlm1+c1kAJ3hMgcLN7V6dDb8wmjZpgU7YqYgAk=
+			</data>
+		</dict>
+		<key>ios-arm64/StreamingSession.framework/LICENSE</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6mm2kX6iMs2W0FnIjULdu3taXtY=
+			</data>
+			<key>hash2</key>
+			<data>
+			1zkTcc+hxBJKSuXgGGADDYsMdeo9ZvxM22NtYlMoymA=
 			</data>
 		</dict>
 		<key>ios-arm64/StreamingSession.framework/Modules/StreamingSession.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -69,11 +84,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Oabvo4wOOxlHV/PdWNLwEVfILqo=
+			2JuuQl8zlhZPk514FgsQdiumIlo=
 			</data>
 			<key>hash2</key>
 			<data>
-			vNyBQ640Hg0mRmeNnTZZbyqCA/nhzWHE7rONNVlfO6M=
+			4L98j/yGEjoXrqWaxNM9Hh5Hcp+aLvB/UTegWstWS8E=
 			</data>
 		</dict>
 		<key>ios-arm64/StreamingSession.framework/Modules/StreamingSession.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -91,55 +106,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1R2c/LRaHu8y9rqBgYY0UI3DPcY=
+			cFb3PJjR7lMR1hjC2wK423tCVOA=
 			</data>
 			<key>hash2</key>
 			<data>
-			/EpjY0Qs7ZcLi9f03iQXhPaFmiCaOtqkDnxDqMuFdvs=
+			/lAegqb4WMLJ6Ld8gWv3aat8rdeIlDG9MOd6PMwLs3g=
 			</data>
 		</dict>
 		<key>ios-arm64/StreamingSession.framework/StreamingSession</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KGQLdzVWerejrlQGBDyuiIjHDEU=
+			+N2SySzuC6bUvSVyknr5cDA5BCk=
 			</data>
 			<key>hash2</key>
 			<data>
-			N7ZjXs7hE+y2kIaqKInrfUsQbcNWgpmtZck21eQYd/w=
+			NWX9qilI3krQX8K679qrmnr8TUTFO0g4IjgRXNO+FW8=
 			</data>
 		</dict>
 		<key>ios-arm64/StreamingSession.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cG6uGtb4hrhzXxphGH25fhxApTs=
+			xoMKEBJMaOrgzxVjmpC942P1vZ4=
 			</data>
 			<key>hash2</key>
 			<data>
-			n99UVIkCjsuEn4o0aMdlVT21bFSQnL8+3wh7hq3jZXg=
+			5pI7QbgIO7sBqT4EeBsug/vngSh0sjKkhH5MAioSo5I=
 			</data>
 		</dict>
 		<key>ios-arm64/StreamingSession.framework/version.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yqLN59VR/nd0evq5/9yF4PwvnJY=
+			6S0vIRo8zFOqQWIQZg6h8bHa8q4=
 			</data>
 			<key>hash2</key>
 			<data>
-			OsX3YHmYJ9maoo5AWVdF0ADKtq2T20e/d9uzLhkKgLE=
+			PTTx6CgKOZjH9EZrSTFeN9s9WNK9CSSiXGEv8jqQRAY=
 			</data>
 		</dict>
 		<key>version.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AxT1KuCIvN7pxRDZkQylbCp+7f8=
+			hfNsfSTiaGii5YdCTQqeNcmgjCY=
 			</data>
 			<key>hash2</key>
 			<data>
-			sVeOSGjjlszyeL5l0P6XoHtA2z6s4RZ1PnD8Eb3LPcw=
+			fBC54Ry2IMEtmceDbdBFaZbtdnv2aW2vod9/1hbhMyQ=
 			</data>
 		</dict>
 	</dict>
