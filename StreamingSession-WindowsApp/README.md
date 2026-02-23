@@ -42,15 +42,28 @@ bin/
 
 NVIDIA provides these binaries separately.
 
+## OpenXR Runtime Management
+
+The application automatically manages the OpenXR runtime selection using the `XR_RUNTIME_JSON` environment variable. This ensures that the application uses the CloudXR OpenXR runtime. The environment variable overrides any system-wide OpenXR runtime settings (registry) and ensures CloudXR is used.
+
+### Important:
+
+To avoid conflicts, ensure only one CloudXR Runtime folder exists in `Server\releases\`.
+
+If multiple CloudXR versions are present (e.g., both `CloudXR-6.0.2-Win64-sdk` and `CloudXR-6.0.3-Win64-sdk`), the application will:
+- Detect all `openxr_cloudxr.json` files
+- Log a warning
+- Use the first one found (which may not be the intended version)
+
 ## Building
 
 1. Open `FoveatedStreamingSample.sln` in Visual Studio 2022 or newer
 2. Build the solution (Ctrl+Shift+B) or click Build > Build Solution
 
 ## Running
-1. Switch your OpenXR runtime to the CloudXR's openxr_cloudxr.json
-2. Launch FoveatedStreamingSample.exe
-3. Input your client app's bundle ID in the App Bundle ID field to advertise the endpoint over mDNS
+
+1. Launch FoveatedStreamingSample.exe (the CloudXR runtime is configured automatically via `XR_RUNTIME_JSON`)
+2. Input your client app's bundle ID in the App Bundle ID field to advertise the endpoint over mDNS
 
 ## Requirements
 

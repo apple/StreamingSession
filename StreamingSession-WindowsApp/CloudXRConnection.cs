@@ -90,6 +90,9 @@ namespace FoveatedStreaming.WindowsSample
         /// Process object for NvStreamManager.exe
         private Process _NVStreamManagerProcess;
 
+        /// Job object for automatic child process cleanup on crash
+        private ProcessJobObject _JobObject;
+
         private RPCClient _RPCClient;
         private bool _DidDispose = false;
 
@@ -101,6 +104,43 @@ namespace FoveatedStreaming.WindowsSample
 
         /// <summary>Log buffer for diagnostic logging of CloudXR/NvStreamManager events.</summary>
         public LogBuffer LogBuffer { get; }
+
+        /// <summary>
+        /// Recursively searches for the openxr_cloudxr.json file in the releases directory.
+        ///
+        /// IMPORTANT: There should only be ONE CloudXR runtime version folder in the Server\releases\ directory.
+        /// If multiple CloudXR versions are present, this method will pick the first one found,
+        /// which may not be the intended version.
+        /// </summary>
+        /// <param name="serverPath">Path to the Server directory</param>
+        /// <param name="logBuffer">Optional log buffer for warnings</param>
+        /// <returns>Full path to openxr_cloudxr.json, or null if not found</returns>
+        private static string FindCloudXRRuntimeJson(string serverPath, LogBuffer logBuffer = null)
+        {
+            string releasesPath = System.IO.Path.Combine(serverPath, "releases");
+
+            if (!Directory.Exists(releasesPath))
+            {
+                return null;
+            }
+
+            // Recursively search for openxr_cloudxr.json files
+            string[] jsonFiles = Directory.GetFiles(releasesPath, "openxr_cloudxr.json", SearchOption.AllDirectories);
+
+            if (jsonFiles.Length == 0)
+            {
+                return null;
+            }
+
+            if (jsonFiles.Length > 1)
+            {
+                string warningMessage = $"[WARNING] Found {jsonFiles.Length} openxr_cloudxr.json files. Using: {jsonFiles[0]}. Ensure only one CloudXR version is deployed.";
+                logBuffer?.Add(warningMessage);
+                Console.WriteLine(warningMessage);
+            }
+
+            return jsonFiles[0];
+        }
 
         private class RPCClient: IDisposable
         {
@@ -303,6 +343,20 @@ namespace FoveatedStreaming.WindowsSample
         {
             this.LogBuffer = logBuffer;
 
+            // Set XR_RUNTIME_JSON environment variable for the current process
+            string serverPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Server");
+            string cloudXRRuntimeJsonPath = FindCloudXRRuntimeJson(serverPath, logBuffer);
+
+            if (cloudXRRuntimeJsonPath != null)
+            {
+                Environment.SetEnvironmentVariable("XR_RUNTIME_JSON", cloudXRRuntimeJsonPath);
+                LogBuffer.Add($"[ENV] Set XR_RUNTIME_JSON={cloudXRRuntimeJsonPath}");
+            }
+            else
+            {
+                LogBuffer.Add("[WARNING] Could not find openxr_cloudxr.json in releases directory");
+            }
+
             CreateNVStreamManagerProcess();
 
             _RPCClient = new RPCClient();
@@ -392,6 +446,42 @@ namespace FoveatedStreaming.WindowsSample
             return null;
         }
 
+        /// <summary>
+        /// Finds any running CloudXR-related processes (NvStreamManager or CloudXRService).
+        /// Used to detect orphaned processes from a previous crashed session.
+        /// </summary>
+        /// <returns>List of running CloudXR processes that the user may want to terminate.</returns>
+        public static List<Process> GetExistingCloudXRProcesses()
+        {
+            var processes = new List<Process>();
+            var processNames = new[] { "NvStreamManager", "CloudXRService" };
+
+            foreach (var procName in processNames)
+            {
+                foreach (Process p in Process.GetProcessesByName(procName))
+                {
+                    try
+                    {
+                        // Verify we can access the process (filters out inaccessible system processes)
+                        var _ = p.MainModule?.FileName;
+                        processes.Add(p);
+                    }
+                    catch (System.ComponentModel.Win32Exception)
+                    {
+                        // Access denied for some system processes; skip them
+                        continue;
+                    }
+                    catch (InvalidOperationException)
+                    {
+                        // Process may have exited between GetProcesses() and accessing MainModule
+                        continue;
+                    }
+                }
+            }
+
+            return processes;
+        }
+
         private void CreateNVStreamManagerProcess()
         {
             if (_NVStreamManagerProcess != null)
@@ -420,6 +510,13 @@ namespace FoveatedStreaming.WindowsSample
                 RedirectStandardOutput = true,
                 RedirectStandardError = true
             };
+
+            // Explicitly set XR_RUNTIME_JSON for the child process
+            string cloudXRRuntimeJsonPath = FindCloudXRRuntimeJson(serverPath, LogBuffer);
+            if (cloudXRRuntimeJsonPath != null)
+            {
+                startInfo.EnvironmentVariables["XR_RUNTIME_JSON"] = cloudXRRuntimeJsonPath;
+            }
 
             _NVStreamManagerProcess = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
 
@@ -453,6 +550,33 @@ namespace FoveatedStreaming.WindowsSample
             };
 
             _NVStreamManagerProcess.Start();
+
+            // Assign the process to a job object so it's automatically terminated if we crash
+            if (_JobObject == null)
+            {
+                try
+                {
+                    _JobObject = new ProcessJobObject();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[CloudXRConnection] Warning: Failed to create job object: {ex.Message}");
+                    LogBuffer.Add("[PROCESS] Warning: Job object creation failed - process may not auto-terminate on crash");
+                }
+            }
+
+            if (_JobObject != null)
+            {
+                if (_JobObject.AssignProcess(_NVStreamManagerProcess))
+                {
+                    LogBuffer.Add("[PROCESS] Assigned to job object for auto-cleanup on crash");
+                }
+                else
+                {
+                    LogBuffer.Add("[PROCESS] Warning: Job object assignment failed - process may not auto-terminate on crash");
+                }
+            }
+
             _NVStreamManagerProcess.BeginOutputReadLine();
             _NVStreamManagerProcess.BeginErrorReadLine();
             LogBuffer.Add("[PROCESS] Started NvStreamManager.exe");
@@ -520,6 +644,7 @@ namespace FoveatedStreaming.WindowsSample
                 if (disposing)
                 {
                     _RPCClient.Dispose();
+                    _JobObject?.Dispose();
                 }
 
                 if (_NVStreamManagerProcess != null && !_NVStreamManagerProcess.HasExited)

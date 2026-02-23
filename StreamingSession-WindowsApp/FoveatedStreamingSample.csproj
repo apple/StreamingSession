@@ -94,6 +94,7 @@
       <DependentUpon>LogWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainViewModel.cs" />
+    <Compile Include="ProcessJobObject.cs" />
     <Compile Include="tcpMessageClasses.cs" />
     <Compile Include="SessionManagementConnection.cs" />
     <Page Include="LogWindow.xaml">

@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
-// swift-module-flags: -target arm64-apple-ios26.1 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -user-module-version 11 -module-name StreamingSession
+// swift-module-flags: -target arm64-apple-ios26.1 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -user-module-version 12 -module-name StreamingSession
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AVFoundation
 import CloudXRKit
@@ -21,19 +21,21 @@ import _Concurrency
 import _RealityKit_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
-public struct StreamingEndpoint : Swift.Hashable, Swift.Equatable, Swift.Sendable, Swift.Codable {
-  public static var systemDiscovered: StreamingSession.StreamingEndpoint {
-    get
+extension StreamingSession.FoveatedStreamingSession {
+  public struct Endpoint : Swift.Hashable, Swift.Equatable, Swift.Sendable, Swift.Codable {
+    public static var systemDiscovered: StreamingSession.FoveatedStreamingSession.Endpoint {
+      get
+    }
+    public static func local(ipAddress: any Network.IPAddress, port: Network.NWEndpoint.Port) -> StreamingSession.FoveatedStreamingSession.Endpoint
+    public static func remote(serverName: Swift.String, signalingHeaders: [Swift.String : Swift.String]) -> StreamingSession.FoveatedStreamingSession.Endpoint
+    public static func == (a: StreamingSession.FoveatedStreamingSession.Endpoint, b: StreamingSession.FoveatedStreamingSession.Endpoint) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
   }
-  public static func local(ipAddress: Swift.String, port: Swift.Int = 55000) -> StreamingSession.StreamingEndpoint
-  public static func remote(serverName: Swift.String) -> StreamingSession.StreamingEndpoint
-  public static func == (a: StreamingSession.StreamingEndpoint, b: StreamingSession.StreamingEndpoint) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-  public init(from decoder: any Swift.Decoder) throws
 }
 extension SwiftUICore.View {
   @_Concurrency.MainActor public func deviceDiscovery(session: StreamingSession.FoveatedStreamingSession) -> some SwiftUICore.View
@@ -48,9 +50,16 @@ extension StreamingSession.FoveatedStreamingSession {
     get
   }
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor public func getMessageChannel(_ channelID: StreamingSession.FoveatedStreamingSession.MessageChannel.ID) -> StreamingSession.FoveatedStreamingSession.MessageChannel?
+  @_Concurrency.MainActor public func messageChannel(for channelID: StreamingSession.FoveatedStreamingSession.MessageChannel.ID) -> StreamingSession.FoveatedStreamingSession.MessageChannel?
   #endif
   @_hasMissingDesignatedInitializers public class MessageChannel : Swift.Identifiable {
+    public struct SendError : Foundation.LocalizedError {
+      #if compiler(>=5.3) && $NonescapableTypes
+      public var errorDescription: Swift.String? {
+        get
+      }
+      #endif
+    }
     public struct ID : Swift.Hashable, Swift.Equatable, Swift.Sendable {
       #if compiler(>=5.3) && $NonescapableTypes
       public var uuidRepresentation: Foundation.UUID? {
@@ -84,8 +93,7 @@ extension StreamingSession.FoveatedStreamingSession {
       get
     }
     public func disconnect()
-    @discardableResult
-    public func sendServerMessage(_ data: Foundation.Data) -> Swift.Bool
+    public func sendMessage(_ data: Foundation.Data) throws
     @objc deinit
   }
 }
@@ -121,10 +129,12 @@ extension StreamingSession.FoveatedStreamingSession.MessageChannel : nonisolated
     public static var appInitiatedDisconnect: StreamingSession.FoveatedStreamingSession.DisconnectReason {
       get
     }
+    public static var endpointInitiatedDisconnect: StreamingSession.FoveatedStreamingSession.DisconnectReason {
+      get
+    }
     public static var unauthorized: StreamingSession.FoveatedStreamingSession.DisconnectReason {
       get
     }
-    public static func streamInterrupted(localizedDescription: Swift.String) -> StreamingSession.FoveatedStreamingSession.DisconnectReason
     #if compiler(>=5.3) && $NonescapableTypes
     public var errorDescription: Swift.String? {
       get
@@ -135,7 +145,6 @@ extension StreamingSession.FoveatedStreamingSession.MessageChannel : nonisolated
   @_Concurrency.MainActor public var status: StreamingSession.FoveatedStreamingSession.Status {
     get
   }
-  public typealias Endpoint = StreamingSession.StreamingEndpoint
   @_Concurrency.MainActor public init()
   @_Concurrency.MainActor public func connect(endpoint: StreamingSession.FoveatedStreamingSession.Endpoint) async throws
   @_Concurrency.MainActor public func disconnect() async
@@ -151,9 +160,6 @@ extension StreamingSession.FoveatedStreamingSession : nonisolated Observation.Ob
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s16StreamingSession08FoveatedA4ViewV4bodyQrvp", 0) __
-}
-extension os.Logger {
-  public static let streaming: os.Logger
 }
 extension StreamingSession.FoveatedStreamingSession : Swift.Sendable {}
 extension StreamingSession.FoveatedStreamingView : Swift.Sendable {}

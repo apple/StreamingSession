@@ -6,7 +6,7 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		7IV1w/A9LoB3WRd/g6o1ZA//J1Q=
+		f1mK+6YddNC2zzD5gEILPEM+2BM=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Modules/StreamingSession.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		oINJDiJ8nVHH63d/F5va8YyGex0=
+		RuxiZ57K2yif2Ft1DzC5Tmd4vDA=
 		</data>
 		<key>Modules/StreamingSession.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		2JuuQl8zlhZPk514FgsQdiumIlo=
+		aMrk13C+etUnXMiNGgM56GwsT5Y=
 		</data>
 		<key>Modules/StreamingSession.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		ji/m+B432gvu/Ys7CmHewp25G38=
+		LgWbFf1ruq8CQQ+ujMP37h329/c=
 		</data>
 		<key>Modules/StreamingSession.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		cFb3PJjR7lMR1hjC2wK423tCVOA=
+		Dy0YGmGmiCod2XJ3uWY4uLZxxfs=
 		</data>
 		<key>version.plist</key>
 		<data>
-		6S0vIRo8zFOqQWIQZg6h8bHa8q4=
+		/2wp7y1B4ynbVmPl7Ga9s55XeXc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -46,35 +46,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BL1e9/N13I/TzxfJwloAdrNYIdqzz7jPTNLeIZg5YCg=
+			74R23v5X4fhygcFIwf+H/OhlxaBQwFBpFLb4kPbIdkE=
 			</data>
 		</dict>
 		<key>Modules/StreamingSession.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4L98j/yGEjoXrqWaxNM9Hh5Hcp+aLvB/UTegWstWS8E=
+			oK0fDKTv0YU4Uxsrf4Tzb4udkSButETi3ugQ4gmunQM=
 			</data>
 		</dict>
 		<key>Modules/StreamingSession.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FLxm8MC9YJZDELY9Mrn1RjOaAyc0pvpdIj96Zr/k5Lw=
+			MbSbTK/CQ+LAlRVo47XfpIOTngUaNMTcRXc5iEsyakc=
 			</data>
 		</dict>
 		<key>Modules/StreamingSession.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/lAegqb4WMLJ6Ld8gWv3aat8rdeIlDG9MOd6PMwLs3g=
+			HQ0ZGpyDmhAt2m1h0Q8EQP1PWp3WEA5U6/N6Gi7z8og=
 			</data>
 		</dict>
 		<key>version.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PTTx6CgKOZjH9EZrSTFeN9s9WNK9CSSiXGEv8jqQRAY=
+			iumOCcjhwnTIZqecRNmG/3aL8JABPFviw0I/kPEsAE4=
 			</data>
 		</dict>
 	</dict>

@@ -11,6 +11,7 @@
 
 using System;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
@@ -98,6 +99,35 @@ namespace FoveatedStreaming.WindowsSample
                                 MessageBoxButton.OK,
                                 MessageBoxImage.Error);
                 return;
+            }
+
+            // Check for existing CloudXR processes that may be left over from a previous crashed session
+            var existingProcesses = CloudXRConnection.GetExistingCloudXRProcesses();
+            if (existingProcesses.Any())
+            {
+                var processNames = string.Join(", ", existingProcesses.Select(p => p.ProcessName).Distinct());
+                var result = MessageBox.Show(
+                    $"The following CloudXR processes are already running:\n{processNames}\n\n" +
+                    "These may be left over from a previous session. " +
+                    "Would you like to terminate them and continue?",
+                    "Existing Processes Detected",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Warning);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    foreach (var process in existingProcesses)
+                    {
+                        try { process.Kill(); } catch { }
+                    }
+                    // Brief delay to allow processes to terminate
+                    Thread.Sleep(500);
+                }
+                else
+                {
+                    // User chose not to kill existing processes - abort connection
+                    return;
+                }
             }
 
             _MainViewModel.DisplayDisconnectButton = false;
