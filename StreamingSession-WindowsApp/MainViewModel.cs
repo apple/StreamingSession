@@ -46,15 +46,17 @@ namespace FoveatedStreaming.WindowsSample
         private string _bonjourStatusText = "Uninitialized";
         private string _sessionManagementStatusText = "Uninitialized";
         private string _cloudXRStatusText = "Uninitialized";
+        private string _openXRLogFilePath = null;
 
         private bool _displayDisconnectButton = false;
         private bool _displayStartPanel = true;
+        private bool _showRuntimeWarning = false;
 
         private ObservableCollection<string> _localIPAddresses;
         private string _selectedIPAddress;
 
-        private string _bundleId = "com.company.placeHolderBundleID";
-        private string _port = "55000";
+        private string _bundleId = Properties.Settings.Default.BundleID;
+        private string _port = Properties.Settings.Default.Port;
         private bool _forceQRCode = false;
 
         private ImageSource _qrImageSource = null;
@@ -139,6 +141,16 @@ namespace FoveatedStreaming.WindowsSample
             }
         }
 
+        public string OpenXRLogFilePath
+        {
+            get => _openXRLogFilePath;
+            set
+            {
+                _openXRLogFilePath = value;
+                OnPropertyChanged(nameof(OpenXRLogFilePath));
+            }
+        }
+
         public bool DisplayDisconnectButton
         {
             get => _displayDisconnectButton;
@@ -147,6 +159,16 @@ namespace FoveatedStreaming.WindowsSample
             {
                 _displayDisconnectButton = value;
                 OnPropertyChanged(nameof(DisplayDisconnectButton));
+            }
+        }
+
+        public bool ShowRuntimeWarning
+        {
+            get => _showRuntimeWarning;
+            set
+            {
+                _showRuntimeWarning = value;
+                OnPropertyChanged(nameof(ShowRuntimeWarning));
             }
         }
 
@@ -164,13 +186,25 @@ namespace FoveatedStreaming.WindowsSample
         public string BundleID
         {
             get => _bundleId;
-            set { _bundleId = value; OnPropertyChanged(nameof(BundleID)); }
+            set
+            {
+                _bundleId = value;
+                Properties.Settings.Default.BundleID = value;
+                Properties.Settings.Default.Save();
+                OnPropertyChanged(nameof(BundleID));
+            }
         }
 
         public string Port
         {
             get => _port;
-            set { _port = value; OnPropertyChanged(nameof(Port)); }
+            set
+            {
+                _port = value;
+                Properties.Settings.Default.Port = value;
+                Properties.Settings.Default.Save();
+                OnPropertyChanged(nameof(Port));
+            }
         }
 
         public bool ForceQRCode

@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using Makaretu.Dns;
+using Microsoft.Win32;
 using Newtonsoft.Json;
 using QRCoder;
 using FoveatedStreamingSample;
@@ -48,6 +49,10 @@ namespace FoveatedStreaming.WindowsSample
         private MainViewModel _viewModel;
         private readonly LogBuffer _smcLogBuffer;
         private readonly LogBuffer _cloudXRLogBuffer;
+        private string _localJsonPath;
+
+        private bool _isCloudXRServiceStarted = false;
+        public bool IsCloudXRServiceStarted => _isCloudXRServiceStarted;
 
         public class InvalidConfigurationException : Exception
         {
@@ -100,6 +105,48 @@ namespace FoveatedStreaming.WindowsSample
             _bonjour = new BonjourConnection(BundleID, Endpoint);
 
             _cloudXR.StateChanged += this.OnCloudXRStateChange;
+
+            CheckActiveRuntime();
+        }
+
+        private void CheckActiveRuntime()
+        {
+            string serverPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Server");
+            string localJsonPath = CloudXRConnection.FindCloudXRRuntimeJson(serverPath);
+            if (string.IsNullOrEmpty(localJsonPath))
+            {
+                return;
+            }
+
+            string activeRuntime = null;
+            try
+            {
+                using (var key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Khronos\OpenXR\1"))
+                {
+                    activeRuntime = key?.GetValue("ActiveRuntime") as string;
+                }
+            }
+            catch (Exception) { }
+
+            bool mismatch = !string.Equals(activeRuntime, localJsonPath, StringComparison.OrdinalIgnoreCase);
+            _localJsonPath = localJsonPath;
+
+            Application.Current.Dispatcher.InvokeAsync(() =>
+            {
+                _viewModel.ShowRuntimeWarning = mismatch;
+            });
+        }
+
+        public void FixActiveRuntime()
+        {
+            if (!string.IsNullOrEmpty(_localJsonPath))
+            {
+                RegistryElevator.SetActiveRuntime(_localJsonPath);
+                Application.Current.Dispatcher.InvokeAsync(() =>
+                {
+                    _viewModel.ShowRuntimeWarning = false;
+                });
+            }
         }
 
         public void Dispose()
@@ -221,9 +268,11 @@ namespace FoveatedStreaming.WindowsSample
 
             if (sessionStatus == SessionStatus.Waiting)
             {
-                // If the session status is WAITING, this means the Vision Pro is waiting for the game to start.
-                // So, start the CloudXR session and then send the MediaStreamIsReady message.
-                await _cloudXR.UpdateCloudXRPresentation(true);
+                if (!_isCloudXRServiceStarted)
+                {
+                    await _cloudXR.UpdateCloudXRPresentation(true);
+                    _isCloudXRServiceStarted = true;
+                }
 
                 await _sessionManagement.MediaStreamIsReady(cancellationToken);
             } else if (sessionStatus == SessionStatus.Disconnected)
@@ -232,10 +281,30 @@ namespace FoveatedStreaming.WindowsSample
             }
         }
 
+        public async Task StartCloudXRService()
+        {
+            await _cloudXR.UpdateCloudXRPresentation(true);
+            _isCloudXRServiceStarted = true;
+        }
+
+        public async Task StopCloudXRService()
+        {
+            await _cloudXR.UpdateCloudXRPresentation(false);
+            _isCloudXRServiceStarted = false;
+        }
+
         private async Task OnCloudXRStateChange(CloudXRConnection.State newState)
         {
             await Application.Current.Dispatcher.InvokeAsync(() =>
             {
+                string resolvedLogPath = ResolveServerLogPath(newState.OpenXRLogFilePath);
+                _viewModel.OpenXRLogFilePath = resolvedLogPath;
+
+                if (!string.IsNullOrEmpty(resolvedLogPath))
+                {
+                    _cloudXRLogBuffer.Add($"[RUNTIME LOG] {resolvedLogPath}");
+                }
+
                 if (newState.GameIsConnected && newState.CloudXRClientIsConnected && newState.OpenXRRuntimeIsRunning)
                 {
                     _viewModel.CloudXRStatus = ConnectionStatus.Running;
@@ -258,6 +327,25 @@ namespace FoveatedStreaming.WindowsSample
                     }
                 }
             });
+        }
+        /// <summary>
+        /// The path from nv_service_status_t is a directory. Finds the cxr_server.*.log file inside it.
+        /// Returns null if the directory is null/empty or no matching file exists yet.
+        /// </summary>
+        private static string ResolveServerLogPath(string directoryPath)
+        {
+            if (string.IsNullOrEmpty(directoryPath) || !Directory.Exists(directoryPath))
+            {
+                return null;
+            }
+
+            var files = Directory.GetFiles(directoryPath, "cxr_server.*.log");
+            if (files.Length == 0)
+            {
+                return null;
+            }
+
+            return files[0];
         }
     }
 }

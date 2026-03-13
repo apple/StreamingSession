@@ -73,12 +73,15 @@ namespace FoveatedStreaming.WindowsSample
             public bool OpenXRRuntimeIsRunning;
             /// <summary>True when the OpenXR game is connected to the runtime.</summary>
             public bool GameIsConnected;
+            /// <summary>Path to the OpenXR runtime log file, or null if not yet available.</summary>
+            public string OpenXRLogFilePath;
 
             public bool Equals(State other)
             {
                 return CloudXRClientIsConnected == other.CloudXRClientIsConnected
                     && OpenXRRuntimeIsRunning == other.OpenXRRuntimeIsRunning
-                    && GameIsConnected == other.GameIsConnected;
+                    && GameIsConnected == other.GameIsConnected
+                    && OpenXRLogFilePath == other.OpenXRLogFilePath;
             }
         }
 
@@ -115,7 +118,7 @@ namespace FoveatedStreaming.WindowsSample
         /// <param name="serverPath">Path to the Server directory</param>
         /// <param name="logBuffer">Optional log buffer for warnings</param>
         /// <returns>Full path to openxr_cloudxr.json, or null if not found</returns>
-        private static string FindCloudXRRuntimeJson(string serverPath, LogBuffer logBuffer = null)
+        internal static string FindCloudXRRuntimeJson(string serverPath, LogBuffer logBuffer = null)
         {
             string releasesPath = System.IO.Path.Combine(serverPath, "releases");
 
@@ -252,6 +255,23 @@ namespace FoveatedStreaming.WindowsSample
                 }
             }
 
+            public string QueryJsonPath()
+            {
+                if (_DidDispose)
+                {
+                    throw new ObjectDisposedException(nameof(RPCClient));
+                }
+
+                ConnectIfNeeded();
+
+                if (!_IsCloudXRServiceRunning)
+                {
+                    return null;
+                }
+
+                return NvCloudXR.get_cxr_service_json_path(_ClientPointer);
+            }
+
             public string GenerateClientToken(string clientID)
             {
                 if (_DidDispose)
@@ -343,20 +363,6 @@ namespace FoveatedStreaming.WindowsSample
         {
             this.LogBuffer = logBuffer;
 
-            // Set XR_RUNTIME_JSON environment variable for the current process
-            string serverPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Server");
-            string cloudXRRuntimeJsonPath = FindCloudXRRuntimeJson(serverPath, logBuffer);
-
-            if (cloudXRRuntimeJsonPath != null)
-            {
-                Environment.SetEnvironmentVariable("XR_RUNTIME_JSON", cloudXRRuntimeJsonPath);
-                LogBuffer.Add($"[ENV] Set XR_RUNTIME_JSON={cloudXRRuntimeJsonPath}");
-            }
-            else
-            {
-                LogBuffer.Add("[WARNING] Could not find openxr_cloudxr.json in releases directory");
-            }
-
             CreateNVStreamManagerProcess();
 
             _RPCClient = new RPCClient();
@@ -373,6 +379,7 @@ namespace FoveatedStreaming.WindowsSample
                 newState.CloudXRClientIsConnected = false;
                 newState.GameIsConnected = false;
                 newState.OpenXRRuntimeIsRunning = false;
+                newState.OpenXRLogFilePath = null;
 
                 try
                 {
@@ -383,6 +390,11 @@ namespace FoveatedStreaming.WindowsSample
                         newState.CloudXRClientIsConnected = status.Value.cloudxr_client_connected;
                         newState.GameIsConnected = status.Value.openxr_app_connected;
                         newState.OpenXRRuntimeIsRunning = status.Value.openxr_runtime_running;
+                        string logPath = status.Value.OpenXRLogFilePath;
+                        if (!string.IsNullOrEmpty(logPath))
+                        {
+                            newState.OpenXRLogFilePath = logPath;
+                        }
                     }
                 }
                 catch (ObjectDisposedException)
@@ -511,13 +523,6 @@ namespace FoveatedStreaming.WindowsSample
                 RedirectStandardError = true
             };
 
-            // Explicitly set XR_RUNTIME_JSON for the child process
-            string cloudXRRuntimeJsonPath = FindCloudXRRuntimeJson(serverPath, LogBuffer);
-            if (cloudXRRuntimeJsonPath != null)
-            {
-                startInfo.EnvironmentVariables["XR_RUNTIME_JSON"] = cloudXRRuntimeJsonPath;
-            }
-
             _NVStreamManagerProcess = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
 
             _NVStreamManagerProcess.OutputDataReceived += (sender, e) =>
@@ -630,6 +635,15 @@ namespace FoveatedStreaming.WindowsSample
                 {
                     await Task.Yield();
                     await Task.Delay(TimeSpan.FromSeconds(StateChangePollDelaySeconds));
+                }
+            }
+
+            if (presentationRequested)
+            {
+                string jsonPath = _RPCClient.QueryJsonPath();
+                if (!string.IsNullOrEmpty(jsonPath))
+                {
+                    LogBuffer.Add($"[JSON PATH] {jsonPath}");
                 }
             }
         }

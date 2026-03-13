@@ -89,7 +89,9 @@
     <Compile Include="BonjourConnection.cs" />
     <Compile Include="CloudXRConnection.cs" />
     <Compile Include="ConnectionManager.cs" />
+    <Compile Include="FileLogBuffer.cs" />
     <Compile Include="LogBuffer.cs" />
+    <Compile Include="RegistryElevator.cs" />
     <Compile Include="LogWindow.xaml.cs">
       <DependentUpon>LogWindow.xaml</DependentUpon>
     </Compile>

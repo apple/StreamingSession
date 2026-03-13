@@ -125,10 +125,28 @@ namespace FoveatedStreaming.WindowsSample
         [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl)]
         public static extern nv_rpc_result_t nv_rpc_client_get_cxr_service_status(IntPtr client, out nv_service_status_t status_out);
 
+        [DllImport(DLL_NAME, CallingConvention = CallingConvention.Cdecl)]
+        public static extern nv_rpc_result_t nv_rpc_client_get_cxr_service_json_path(
+            IntPtr client,
+            StringBuilder path_out,
+            UIntPtr path_size);
+
         public static string get_error_string(nv_rpc_result_t result)
         {
             IntPtr ptr = nv_rpc_client_get_error_string(result);
             return ptr != IntPtr.Zero ? Marshal.PtrToStringAnsi(ptr) : "Unknown error";
+        }
+
+        public static string get_cxr_service_json_path(IntPtr client)
+        {
+            const int bufferSize = 4096;
+            var buffer = new StringBuilder(bufferSize);
+            nv_rpc_result_t result = nv_rpc_client_get_cxr_service_json_path(client, buffer, (UIntPtr)bufferSize);
+            if (result != nv_rpc_result_t.NV_RPC_SUCCESS)
+            {
+                return null;
+            }
+            return buffer.ToString();
         }
 
 

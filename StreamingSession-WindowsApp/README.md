@@ -44,16 +44,7 @@ NVIDIA provides these binaries separately.
 
 ## OpenXR Runtime Management
 
-The application automatically manages the OpenXR runtime selection using the `XR_RUNTIME_JSON` environment variable. This ensures that the application uses the CloudXR OpenXR runtime. The environment variable overrides any system-wide OpenXR runtime settings (registry) and ensures CloudXR is used.
-
-### Important:
-
-To avoid conflicts, ensure only one CloudXR Runtime folder exists in `Server\releases\`.
-
-If multiple CloudXR versions are present (e.g., both `CloudXR-6.0.2-Win64-sdk` and `CloudXR-6.0.3-Win64-sdk`), the application will:
-- Detect all `openxr_cloudxr.json` files
-- Log a warning
-- Use the first one found (which may not be the intended version)
+On startup, the application checks whether the active runtime is correctly configured and displays a warning if it is not. Clicking the "Fix" button allows the application to manage the active OpenXR runtime by writing to `HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\OpenXR\1\ActiveRuntime` — you will be prompted for administrator permission if required.
 
 ## Building
 
@@ -62,7 +53,8 @@ If multiple CloudXR versions are present (e.g., both `CloudXR-6.0.2-Win64-sdk` a
 
 ## Running
 
-1. Launch FoveatedStreamingSample.exe (the CloudXR runtime is configured automatically via `XR_RUNTIME_JSON`)
+1. Launch FoveatedStreamingSample.exe
+2. If presented by a warning to fix the active runtime, click on "Fix".
 2. Input your client app's bundle ID in the App Bundle ID field to advertise the endpoint over mDNS
 
 ## Requirements

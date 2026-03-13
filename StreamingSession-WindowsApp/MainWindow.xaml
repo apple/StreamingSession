@@ -155,6 +155,30 @@
                                LineHeight="30"/>
                 </StackPanel>
 
+                <Border Grid.Row="1"
+                        Background="#33FFAA00"
+                        BorderBrush="#66FFAA00"
+                        BorderThickness="1"
+                        CornerRadius="6"
+                        Padding="12,7"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,10"
+                        Visibility="{Binding ShowRuntimeWarning, Converter={StaticResource BoolToVis}}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="⚠"
+                                   Foreground="#FFFFB347"
+                                   VerticalAlignment="Center"
+                                   Margin="0,0,8,0"/>
+                        <TextBlock Text="Active OpenXR runtime is not set correctly"
+                                   Foreground="White"
+                                   VerticalAlignment="Center"
+                                   Margin="0,0,12,0"/>
+                        <Button Content="Fix"
+                                Click="FixActiveRuntimeButton_Click"
+                                Style="{StaticResource SmallButtonStyle}"/>
+                    </StackPanel>
+                </Border>
+
                 <Image x:Name="QRCodeImage"
                        Source="{Binding QRImageSource}"
                        Grid.Row="2"
@@ -206,19 +230,20 @@
                                   Grid.Column="1" 
                                   Margin="5" />
 
-                        <Button x:Name="ConnectButton"
-                            Grid.Row="4"
-                            Grid.ColumnSpan="2"
-                            Content="Start"
-                             Click="ConnectButton_Click"
-                             Style="{StaticResource ModernButtonStyle}"
-                             HorizontalAlignment="Center"
-                         Margin="0,0,0,0"
-                         MinWidth="150"
-                         Height="28"
-                         FontSize="18"
-                         FontWeight="Light"
-                         FontFamily="Arial"/>
+                        <StackPanel Grid.Row="4" Grid.ColumnSpan="2"
+                                    Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            <Button x:Name="ConnectButton"
+                                Content="Start"
+                                Click="ConnectButton_Click"
+                                Style="{StaticResource ModernButtonStyle}"
+                                MinWidth="150"
+                                Height="28"
+                                FontSize="18"
+                                FontWeight="Light"
+                                FontFamily="Arial"/>
+                        </StackPanel>
                     </Grid>
                 </Border>
                 <StackPanel Grid.Row="3" Visibility="{Binding DisplayDisconnectButton, Converter={StaticResource BoolToVis}}">

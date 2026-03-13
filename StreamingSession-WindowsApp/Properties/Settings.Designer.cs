@@ -1,4 +1,4 @@
-﻿//===----------------------------------------------------------------------===//
+//===----------------------------------------------------------------------===//
 // Copyright © 2026 Apple Inc.
 //
 // Licensed under the MIT license (the "License");
@@ -19,15 +19,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace test_WpfApp.Properties
+namespace FoveatedStreaming.WindowsSample.Properties
 {
-
-
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
     {
-
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
 
         public static Settings Default
@@ -36,6 +33,22 @@ namespace test_WpfApp.Properties
             {
                 return defaultInstance;
             }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("com.company.placeHolderBundleID")]
+        public string BundleID
+        {
+            get { return ((string)(this["BundleID"])); }
+            set { this["BundleID"] = value; }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("55000")]
+        public string Port
+        {
+            get { return ((string)(this["Port"])); }
+            set { this["Port"] = value; }
         }
     }
 }

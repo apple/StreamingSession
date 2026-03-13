@@ -18,12 +18,20 @@ namespace FoveatedStreaming.WindowsSample
     public partial class LogWindow : Window
     {
         private readonly LogBuffer _logBuffer;
+        private readonly LogBuffer _runtimeLogBuffer;
+        private LogWindow _runtimeLogWindow;
 
-        public LogWindow(string title, LogBuffer logBuffer)
+        public LogWindow(string title, LogBuffer logBuffer, LogBuffer runtimeLogBuffer = null)
         {
             InitializeComponent();
             Title = title;
             _logBuffer = logBuffer;
+            _runtimeLogBuffer = runtimeLogBuffer;
+
+            if (_runtimeLogBuffer != null)
+            {
+                RuntimeLogButton.Visibility = Visibility.Visible;
+            }
 
             // Load existing logs
             LogTextBox.Text = _logBuffer.GetAll();
@@ -56,6 +64,16 @@ namespace FoveatedStreaming.WindowsSample
         {
             _logBuffer.Clear();
             LogTextBox.Clear();
+        }
+
+        private void RuntimeLogButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (_runtimeLogWindow == null || !_runtimeLogWindow.IsLoaded)
+            {
+                _runtimeLogWindow = new LogWindow("Runtime Log", _runtimeLogBuffer);
+            }
+            _runtimeLogWindow.Show();
+            _runtimeLogWindow.Activate();
         }
     }
 }

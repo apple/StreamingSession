@@ -3,5 +3,12 @@
   <Profiles>
     <Profile Name="(Default)" />
   </Profiles>
-  <Settings />
+  <Settings>
+    <Setting Name="BundleID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">com.company.placeHolderBundleID</Value>
+    </Setting>
+    <Setting Name="Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">55000</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

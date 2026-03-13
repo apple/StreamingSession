@@ -350,7 +350,12 @@ namespace FoveatedStreaming.WindowsSample
             {
                 case "SessionStatusDidChange":
                     var statusMsg = JsonConvert.DeserializeObject<SessionStatusDidChangeMessage>(message);
-                    await _observer.SessionStatusDidChange(this.currentSession.Value, statusMsg.Status, cancellationToken);
+                    SessionInformation sessionInfoSnapshot = this.currentSession.Value;
+                    if (statusMsg.Status == SessionStatus.Disconnected)
+                    {
+                        currentSession = null;
+                    }
+                    await _observer.SessionStatusDidChange(sessionInfoSnapshot, statusMsg.Status, cancellationToken);
                     break;
                 case "RequestBarcodePresentation":
                     await _observer.BarcodePresentationRequested(this.currentSession.Value);

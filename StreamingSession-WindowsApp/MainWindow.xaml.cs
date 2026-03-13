@@ -36,6 +36,9 @@ namespace FoveatedStreaming.WindowsSample
         private readonly LogBuffer _smcLogBuffer = new LogBuffer();
         private readonly LogBuffer _cloudXRLogBuffer = new LogBuffer();
 
+        // Tails the OpenXR runtime log file; created/replaced when the path becomes available
+        private FileLogBuffer _runtimeLogBuffer;
+
         private MainViewModel _MainViewModel
         {
             get
@@ -63,6 +66,28 @@ namespace FoveatedStreaming.WindowsSample
             // Prefer an IPv4 address.  If none exist, select the first one.
             var ipv4Address = localIPAddresses.First((ipString) => ipString.AddressFamily == AddressFamily.InterNetwork);
             _MainViewModel.SelectedIPAddress = ipv4Address?.ToString() ?? localIPAddresses.First()?.ToString() ?? "";
+
+            _MainViewModel.PropertyChanged += OnViewModelPropertyChanged;
+        }
+
+        private void OnViewModelPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName != nameof(MainViewModel.OpenXRLogFilePath))
+            {
+                return;
+            }
+
+            string path = _MainViewModel.OpenXRLogFilePath;
+            if (!string.IsNullOrEmpty(path) && (_runtimeLogBuffer == null || _runtimeLogBuffer.FilePath != path))
+            {
+                _runtimeLogBuffer?.Dispose();
+                _runtimeLogBuffer = new FileLogBuffer(path);
+            }
+            else if (string.IsNullOrEmpty(path))
+            {
+                _runtimeLogBuffer?.Dispose();
+                _runtimeLogBuffer = null;
+            }
         }
 
         private void MainWindow_Closed(object sender, EventArgs e)
@@ -71,6 +96,8 @@ namespace FoveatedStreaming.WindowsSample
             _cloudXRLogWindow?.Close();
             _ConnectionManager?.Dispose();
             _ConnectionManager = null;
+            _runtimeLogBuffer?.Dispose();
+            _runtimeLogBuffer = null;
         }
 
         private async void DisconnectButton_Click(object sender, RoutedEventArgs e)
@@ -90,7 +117,7 @@ namespace FoveatedStreaming.WindowsSample
             _MainViewModel.DisplayStartPanel = true;
         }
 
-        private void ConnectButton_Click(object sender, RoutedEventArgs e)
+        private async void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
             if (_ConnectionManager != null)
             {
@@ -138,21 +165,11 @@ namespace FoveatedStreaming.WindowsSample
                 _ConnectionManager = new ConnectionManager(_MainViewModel, _smcLogBuffer, _cloudXRLogBuffer);
                 _ConnectionManager.SessionDisconnectRequestedByClient += () =>
                 {
-                    Application.Current.Dispatcher.InvokeAsync(async () =>
-                    {
-                        if (_ConnectionManager != null)
-                        {
-                            _MainViewModel.DisplayDisconnectButton = false;
-                            _MainViewModel.DisplayStartPanel = false;
-
-                            await _ConnectionManager.DisposeAsync();
-                            _ConnectionManager = null;
-
-                            _MainViewModel.DisplayDisconnectButton = false;
-                            _MainViewModel.DisplayStartPanel = true;
-                        }
-                        ConnectButton_Click(null, null);
-                     });
+                        // No action needed. SessionManagementConnection's listening loop
+                        // automatically accepts new connections after the client disconnects,
+                        // and Bonjour continues advertising.
+                        // The instances of NvStreamManager.exe and CloudXRService.exe do not need
+                        // to be destroyed before we start listening for new connections.
                 };
             } catch (ConnectionManager.InvalidConfigurationException ex)
             {
@@ -176,6 +193,9 @@ namespace FoveatedStreaming.WindowsSample
 
             _MainViewModel.DisplayDisconnectButton = true;
             _MainViewModel.DisplayStartPanel = false;
+
+            // Launch CloudXR service before we begin connecting
+            await _ConnectionManager.StartCloudXRService();
         }
 
         private void SMCLogButton_Click(object sender, RoutedEventArgs e)
@@ -188,11 +208,16 @@ namespace FoveatedStreaming.WindowsSample
             _smcLogWindow.Activate();
         }
 
+        private void FixActiveRuntimeButton_Click(object sender, RoutedEventArgs e)
+        {
+            _ConnectionManager?.FixActiveRuntime();
+        }
+
         private void CloudXRLogButton_Click(object sender, RoutedEventArgs e)
         {
             if (_cloudXRLogWindow == null || !_cloudXRLogWindow.IsLoaded)
             {
-                _cloudXRLogWindow = new LogWindow("CloudXR Log", _cloudXRLogBuffer);
+                _cloudXRLogWindow = new LogWindow("CloudXR Log", _cloudXRLogBuffer, _runtimeLogBuffer);
             }
             _cloudXRLogWindow.Show();
             _cloudXRLogWindow.Activate();

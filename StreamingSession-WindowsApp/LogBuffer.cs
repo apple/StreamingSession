@@ -35,6 +35,19 @@ namespace FoveatedStreamingSample
             LogAdded?.Invoke(timestamped);
         }
 
+        /// <summary>
+        /// Adds a line without prepending a timestamp.
+        /// For use by subclasses whose lines already carry their own timestamps (e.g. from a log file).
+        /// </summary>
+        protected void AddRaw(string message)
+        {
+            lock (_lock)
+            {
+                _entries.Add(message);
+            }
+            LogAdded?.Invoke(message);
+        }
+
         public string GetAll()
         {
             lock (_lock)
