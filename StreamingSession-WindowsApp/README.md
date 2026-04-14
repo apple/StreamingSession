@@ -28,19 +28,42 @@ StreamingSession-WindowsApp/
 
 ## CloudXR Setup
 
-Place the CloudXR server binaries in the same folder as your executable:
+> **Note:** CloudXR version 6.0.4 and above is now required.
+
+Two separate downloads from NVIDIA NGC are required:
+
+- **[CloudXR Runtime](https://catalog.ngc.nvidia.com/orgs/nvidia/resources/cloudxr-runtime)** — the OpenXR runtime binaries (e.g. `CloudXR-6.0.4-Win64-sdk`)
+- **[CloudXR Stream Manager](https://catalog.ngc.nvidia.com/orgs/nvidia/resources/cloudxr-stream-manager)** — the stream management service (e.g. `Stream-Manager-6.0.3-win64`)
+
+Place the files next to your built executable as follows:
 
 ```
 bin/
 ├── Server/
-│   ├── releases/                    # CloudXR 6.0 binaries
-│   ├── CloudXrService.exe           # CloudXR service application
-│   └── NvStreamManager.exe          # NVIDIA Stream Manager
-├── NvStreamManagerClient.h          # NVIDIA API header file
-└── NvStreamManagerClient.dll        # NVIDIA API dll file
+│   ├── releases/
+│   │   └── 6.0.4/                   # Contents of CloudXR-6.0.4-Win64-sdk/ placed here
+│   │       ├── openxr_cloudxr.json
+│   │       ├── openxr_cloudxr.dll
+│   │       └── ...
+│   ├── CloudXrService.exe           # From Stream Manager download: Server/
+│   ├── NvStreamManager.exe          # From Stream Manager download: Server/
+│   └── cloudxr-runtime.yaml        # From Stream Manager download: Server/
+├── NvStreamManagerClient.h          # From Stream Manager download: SampleClient/
+└── NvStreamManagerClient.dll        # From Stream Manager download: SampleClient/
 ```
 
-NVIDIA provides these binaries separately.
+> **Important:** The CloudXR runtime must be placed inside a subfolder named after its version number (e.g. `releases/6.0.4/`). The Stream Manager discovers available runtimes by looking for these version-named subdirectories. If the runtime files are placed directly in `releases/` without a version subfolder, the Stream Manager will fail to start the service. When multiple version folders are present, the Stream Manager automatically selects the highest version.
+
+`NvStreamManagerClient.dll` and `NvStreamManagerClient.h` are found in the `SampleClient/` subfolder of the Stream Manager download — not in the main SDK archive.
+
+`CloudXrService.exe` is the process host for the CloudXR OpenXR runtime. It is launched automatically by `NvStreamManager.exe` when a streaming session starts and does not need to be run manually.
+
+### Configuring cloudxr-runtime.yaml for iOS
+
+The `cloudxr-runtime.yaml` shipped with the Stream Manager is configured for Apple Vision Pro by default. To stream to an iOS device, two changes are required in `bin/Server/cloudxr-runtime.yaml`:
+
+1. Set `deviceProfile` to `auto-native` — iOS clients will not connect with the default `apple-vision-pro` profile. See [deviceProfile](https://docs.nvidia.com/cloudxr-sdk/latest/usr_guide/cloudxr_runtime/runtime_mgmt_api.html#device-profile).
+2. Set `runtimeFoveation` to `false` — leaving foveation enabled causes a black screen on iOS. See [runtimeFoveation](https://docs.nvidia.com/cloudxr-sdk/latest/usr_guide/cloudxr_runtime/runtime_mgmt_api.html#runtime-foveation).
 
 ## OpenXR Runtime Management
 
